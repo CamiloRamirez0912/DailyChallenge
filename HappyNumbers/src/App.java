@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class App {
@@ -6,20 +7,25 @@ public class App {
         System.out.print("Write a positive integer number: ");
         int number =  sc.nextInt();
         int result = 0;
-        do{
+        HashSet<Integer> seenNumbers = new HashSet<>();
+        do {
             char[] digits = divideDigits(number);
             result = isHappy(digits);
-            if (result>1) {
-                number = result;
-                digits = divideDigits(number);
-            }
-        }while(result!=1);
 
-        if (result==1) {
-            System.out.println("Your number is a happy number :)");
-        }else{
-            System.out.println("Your number is not a happy number :(");
-        }
+            if (result == 1) {
+                System.out.println("Your number is a happy number :)");
+                break;
+            }
+
+            if (seenNumbers.contains(result)) {
+                System.out.println("Your number is not a happy number :(");
+                break;
+            }
+
+            seenNumbers.add(result);
+            number = result;
+
+        } while (true);
         
         
         
@@ -42,15 +48,5 @@ public class App {
             result += (numberParsed*numberParsed);
         }
         return result;
-    }
-
-    public static int reBuildNumber(char[] digits){
-        int number = 0;
-        String numberStr = "";
-        for (int i = 0; i <= digits.length - 1; i++) {
-            numberStr+=digits[i];
-        }
-        number = Integer.parseInt(numberStr);
-        return number;
     }
 }
