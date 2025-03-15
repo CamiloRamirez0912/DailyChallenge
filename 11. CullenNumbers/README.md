@@ -3,9 +3,7 @@
 ## Description
 A **Cullen number** is defined by the formula:
 
-\[
-C_n = n \times 2^n + 1
-\]
+$C_n = n \times 2^n + 1$
 
 Where \( n \) is a positive integer.
 

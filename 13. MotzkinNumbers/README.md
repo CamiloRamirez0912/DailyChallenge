@@ -3,13 +3,11 @@
 ## Description
 The **Motzkin numbers** form a mathematical sequence used in combinatorics, defined by the recurrence relation:
 
-\[
-M_n = M_{n-1} + \sum_{k=0}^{n-2} M_k M_{n-2-k}
-\]
+$M_n = M_{n-1} + \sum_{k=0}^{n-2} M_k M_{n-2-k}$
 
 With the initial values:
-- \( M_0 = 1 \)
-- \( M_1 = 1 \)
+- $M_0 = 1$
+- $M_1 = 1$
 
 The first Motzkin numbers are: **1, 1, 2, 4, 9, 21, 51, 127...**
 

@@ -3,16 +3,14 @@
 ## Description
 The **Bell numbers** form a mathematical sequence used in combinatorics, which count the number of ways to partition a set into non-empty subsets. They are defined by the recurrence relation:
 
-\[
-B_n = \sum_{k=0}^{n-1} \binom{n-1}{k} B_k
-\]
+$B_n = \sum_{k=0}^{n-1} \binom{n-1}{k} B_k$
 
 With the initial values:
-- \( B_0 = 1 \)
-- \( B_1 = 1 \)
-- \( B_2 = 2 \)
-- \( B_3 = 5 \)
-- \( B_4 = 15 \)
+- $B_0 = 1$
+- $B_1 = 1$
+- $B_2 = 2$
+- $B_3 = 5$
+- $B_4 = 15$
 
 The first Bell numbers are: **1, 1, 2, 5, 15, 52, 203...**
 
