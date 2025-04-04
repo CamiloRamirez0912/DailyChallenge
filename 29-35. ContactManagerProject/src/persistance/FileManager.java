@@ -41,7 +41,7 @@ public class FileManager {
         }
 
         String contactJson = "    " + chainObjectJson(contact).replace("\n", "\n    ");
-        raf.writeBytes(contactJson + "]");
+        raf.writeBytes(contactJson + "\n]");
 
         raf.close();
         return true;
